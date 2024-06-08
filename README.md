@@ -11,18 +11,8 @@ If the source data of LIMA has a stricter license than CC BY-NC-SA, the LIMA dat
 
 ### LIMA(rephrased)
 
-Use the rephrased LIMA dataset using Gemini Flash 1.5 with the following instruction:
-```markdown
-Rephrase the following multi-turn conversation, given in the input, using modern, natural English, and make sure to follow these rules:
-* Conversation starts with `[start conversation]` and ends with `[end conversation]`.
-* Each conversation turn is separated by `[sep]`.
-* Rephrase the user's query (odd-numbered turns) while maintaining their original tone and style.
-* Rephrase the assistant's responses (even-numbered turns) using polite and formal English, ensuring that all original content is retained.
-* You can use the original terms.
-* Specify the programming language used for long code snippets and use proper quotation mark `code` for short codes.
-* Keep the LaTeX equations if exist.
-* Keep the references if exist.
-```
+Use the rephrased LIMA dataset using Gemini Flash 1.5.
+The instruction can be found in `lima_gemini.py`.
 
 To generate LIMA(rephrased) use the following:
 ```bash
@@ -39,18 +29,7 @@ KoLIMA(new) is a Korean translation of the LIMA(rephrased), created using Google
 While the [taeshahn/ko-lima](https://huggingface.co/datasets/taeshahn/ko-lima) dataset already exists, our KoLIMA(new) dataset differs significantly in its use of Gemini Flash 1.5 for fixing the original sentences and translation.
 Furthermore, our dataset features user queries written in informal Korean (banmal, 반말) and assistant responses in formal Korean (jondaetmal, 존댓말).
 
-The instruction for translation is given by:
-```markdown
-Translate the following English multi-turn conversation into modern and natural Korean, following rules:
-* Conversation starts with `[start conversation]` and ends with `[end conversation]`.
-* Each conversation turn is separated by `[sep]`.
-* Translate the user's query (odd-numbered turns) using friendly but polite informal Korean (반말) while maintaining their original tone and style.
-* Translate the assistant's responses (even-numbered turns) using polite formal Korean (존댓말) ensuring that all original content is retained.
-* You can use the original terms in English.
-* Specify the programming language used for long code snippets and use proper quotation mark `code` for short codes.
-* Keep the LaTeX equations if exist.
-* Keep the references if exist.
-```
+The instruction for translation can be found in `lima_gemini.py`.
 
 To generate KoLIMA(new) use the following:
 ```bash
